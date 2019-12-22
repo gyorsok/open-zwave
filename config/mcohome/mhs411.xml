@@ -16,29 +16,18 @@
       <Item label="allow ALL ON, forbid ALL OFF" value="2"/>
       <Item label="allow ALL ON, allow ALL OFF" value="255"/>
     </Value>
-    <Value type="list" genre="config" index="4" label="Backligt level" size="1" value="10">
+    <Value type="byte" genre="config" index="4" label="Backlight level" value="10" min="0" max="0">
       <Help>LED backligt brightness level (Default: 10)</Help>
-      <Item label="disabled" value="0"/>
-      <Item label="1" value="1"/>
-      <Item label="2" value="2"/>
-      <Item label="3" value="3"/>
-      <Item label="4" value="4"/>
-      <Item label="5" value="5"/>
-      <Item label="6" value="6"/>
-      <Item label="7" value="7"/>
-      <Item label="8" value="8"/>
-      <Item label="9" value="9"/>
-      <Item label="10" value="10"/>
     </Value>
     <Value type="list" genre="config" index="5" label="Key Mode" size="1" value="0">
       <Help>This function works for corridor or stairwell situation. (Default: 0)</Help>
       <Item label="single click to switch on/off status" value="0"/>
       <Item label="Key default as off state. When it is turned on, then it will be turned off automatically after a time period , which can be set in item 6" value="1"/>
       <Item label="Key default as on state. When it is turned off, then it will be turned on automatically after a time period , which can be set in item 6" value="2"/>
-      <Item label="hold >3s then key is on, and off once released" value="3"/>
-      <Item label="single click to switch on/off status + hold >3s then key is on, and off once released" value="4"/>
+      <Item label="hold 3+s then key is on, and off once released" value="3"/>
+      <Item label="single click to switch on/off status + hold 3+s then key is on, and off once released" value="4"/>
     </Value>
-    <Value type="int" genre="config" index="6" label="Key On duration" size="2" value="0" min="0" max="65535" units="sec">
+    <Value type="short" genre="config" index="6" label="Key On duration" size="2" value="0" min="0" max="65535" units="sec">
       <Help>Sets the key duration for key mode mode</Help>
     </Value> 
   </CommandClass>
